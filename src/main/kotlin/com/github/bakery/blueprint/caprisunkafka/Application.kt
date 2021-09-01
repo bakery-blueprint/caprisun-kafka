@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class CaprisunKafkaApplication
+class Application
 
 fun main(args: Array<String>) {
-    runApplication<CaprisunKafkaApplication>(*args)
+    runApplication<Application>(*args)
 }
