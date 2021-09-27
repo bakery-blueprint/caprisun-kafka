@@ -3,7 +3,9 @@ package com.github.bakery.blueprint.caprisunkafka
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties
 import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
+import org.springframework.context.annotation.FilterType
 import org.springframework.context.annotation.Profile
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory
 import org.springframework.kafka.config.KafkaListenerContainerFactory
@@ -17,6 +19,15 @@ import org.springframework.retry.support.RetryTemplate
 
 @Profile("kafka")
 @Configuration
+@ComponentScan(
+    includeFilters = [
+        ComponentScan.Filter(
+            type = FilterType.ANNOTATION,
+            value = [KafkaListenerComponent::class]
+        )
+    ],
+    useDefaultFilters = false, basePackageClasses = [Application::class]
+)
 class KafkaListenerConfig(private val kafkaProperties: KafkaProperties) {
     @Bean
     fun consumerConfigs(): Map<String, Any> {
