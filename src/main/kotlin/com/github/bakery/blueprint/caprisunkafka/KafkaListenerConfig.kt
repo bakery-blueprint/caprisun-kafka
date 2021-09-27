@@ -17,7 +17,7 @@ import org.springframework.retry.support.RetryTemplate
 
 @Profile("kafka")
 @Configuration
-class KafkaConsumerConfig(private val kafkaProperties: KafkaProperties) {
+class KafkaListenerConfig(private val kafkaProperties: KafkaProperties) {
     @Bean
     fun consumerConfigs(): Map<String, Any> {
         return kafkaProperties.buildConsumerProperties()
