@@ -27,3 +27,13 @@
 - Chapter 12: Administering Kafka
 - Chapter 13: Monitoring Kafka
 
+
+## Kafka Internal 
+
+### KafkaProducer Client Internals
+
+- https://d2.naver.com/helloworld/6560422
+
+### KafkaConsumer Client Internals
+
+- https://d2.naver.com/helloworld/0974525
