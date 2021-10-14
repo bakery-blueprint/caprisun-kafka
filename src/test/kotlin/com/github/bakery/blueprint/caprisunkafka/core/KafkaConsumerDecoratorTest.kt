@@ -3,6 +3,7 @@ package com.github.bakery.blueprint.caprisunkafka.core
 import org.apache.kafka.clients.consumer.KafkaConsumer
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mock
+import java.time.Duration
 
 internal class KafkaConsumerDecoratorTest {
 
@@ -12,6 +13,6 @@ internal class KafkaConsumerDecoratorTest {
         val kafkaConsumerDecorator = KafkaConsumerDecorator(mock(KafkaConsumer::class.java))
 
         // when
-        kafkaConsumerDecorator.poll()
+        kafkaConsumerDecorator.poll(Duration.ZERO)
     }
 }
