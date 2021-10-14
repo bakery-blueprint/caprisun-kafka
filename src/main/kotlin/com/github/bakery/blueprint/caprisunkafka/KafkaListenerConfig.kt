@@ -17,6 +17,9 @@ import org.springframework.retry.backoff.ExponentialBackOffPolicy
 import org.springframework.retry.policy.SimpleRetryPolicy
 import org.springframework.retry.support.RetryTemplate
 
+/**
+ * @see org.apache.kafka.clients.consumer.ConsumerConfig
+ */
 @Profile("kafka")
 @Configuration
 @ComponentScan(
