@@ -39,7 +39,18 @@ follwer들의 정보를 모든 브로커들에게 전송한다.
 또한 팔로어들은 새로운 리더의 메시지 복제를 시작해야 한다는 것을 안다.
 
 
+## 복제
 
+https://needjarvis.tistory.com/604
+
+
+![logo](../../replication.png)
+
+## ISSUE
+
+- 선호 리더.. 이해가 잘 가지 않는다.
+
+- Consumer Group 가끔 등장, 위치는 어디일까??
 
 
 
