@@ -31,6 +31,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
     implementation("org.springframework.kafka:spring-kafka")
+    implementation("org.apache.kafka:kafka-streams")
     implementation("io.projectreactor.kafka:reactor-kafka:1.3.3")
     runtimeOnly("com.h2database:h2")
     implementation("org.springframework.kafka:spring-kafka-test")
